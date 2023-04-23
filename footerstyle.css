@@ -1,0 +1,92 @@
+.footer {
+  flex-shrink: 0;
+  background-color: #e8dbeb;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+	 flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+	display: flex;
+  background-color: #93faf6;
+  color: black;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #908ff9;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+		margin-top: 10px;
+}
+
+.footer-link:hover {
+  background-color: #fc7bd1;
+  text-decoration: none;
+  color: black;
+
+}
+
+.small-link {
+    display: flex;
+    margin-top: 10px;
+	
+}
+
+.small-link {
+  background-color: #93faf6;
+  color: black;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid #908ff9;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.small-link:hover {
+      background-color: #fc7bd1;
+  text-decoration: none;
+  color: black;
+}
+
+.twitter-follow-button {
+    display: flex;
+    align-items: center;
+    background-color: #93faf6;
+    color: black;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 25px;
+	 padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #908ff9;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.twitter-follow-button:hover {
+      background-color: #fc7bd1;
+  text-decoration: none;
+  color: black;
+}
+.twitter-logo {
+    display: inline-flex;
+    align-items: center;
+    background-image: url('2021 Twitter logo - black.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px 18px;
+    padding-left: 28px; /* Adjust this value to create space for the logo */
+}
+.footer p {
+	color: black;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 15px;
+	text-align: center;
+}
