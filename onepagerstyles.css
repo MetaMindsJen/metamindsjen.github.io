@@ -1,0 +1,87 @@
+.onepager h1,
+.onepager h2,
+.onepager p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+}
+
+.onepager .onepager-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.onepager h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.onepager p {
+  font-size: 20px;
+}
+
+.onepager {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f5f5f5;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.onepager h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+.onepager .intro {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.onepager .features {
+  margin: 20px 0;
+}
+
+.onepager .features li {
+  margin-bottom: 10px;
+}
+
+.onepager .unique-tools {
+  margin: 20px 0;
+}
+
+.onepager .unique-tools li {
+  margin-bottom: 10px;
+}
+
+.onepager .testimonials {
+  margin: 20px 0;
+}
+
+.onepager .testimonials blockquote {
+  font-style: italic;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid #ccc;
+}
+
+.onepager .message {
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+}
+	.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
