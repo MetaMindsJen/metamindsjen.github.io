@@ -1,0 +1,116 @@
+.onepager h1,
+.onepager h2,
+.onepager p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+}
+
+.onepager .onepager-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.onepager h2 {
+  font-size: 26px;
+  font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+
+}
+
+.onepager p {
+  font-size: 20px;
+}
+
+.onepager {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f5f5f5;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.onepager h1 {
+  font-size: 24px;
+	font-weight: bold;
+  text-align: center;
+		text-decoration: none;
+	color: black;
+}
+
+.jump-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+
+.onepager .intro {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.onepager .features {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+	margin: 10px;
+}
+
+.onepager .features li {
+  margin-bottom: 10px;
+}
+
+.onepager .unique-tools {
+  font-size: 18px;
+  font-weight: 400;
+font-style: italic;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+.onepager .unique-tools li {
+  margin-bottom: 10px;
+}
+
+.onepager .testimonials {
+  margin: 20px 0;
+}
+
+.onepager .testimonials blockquote {
+  font-style: italic;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid #ccc;
+}
+
+.onepager .message {
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+}
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%; 
+	max-height: auto;
+}
+.centered-image-1 {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image in the banner content */
+}
+
+.centered-image-2 {
+  width: 25%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image in the banner content */
+	padding: none;
+}
