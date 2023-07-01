@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaMinds Blog!</title>
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="headerstyle.css">
+  <link rel="stylesheet" href="ouraibannerstyle.css">
+  <link rel="stylesheet" href="footerstyle.css">
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MetaMindsAPP">
+<meta name="twitter:creator" content="@MetaMindsAPP">
+<meta name="twitter:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta name="twitter:description" content="Blogging in the era of AI with MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta name="twitter:image" content="https://metamindsjen.github.io/tcard.png">
+	<!-- Open Graph meta tags -->
+<meta property="og:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta property="og:description" content="Blogging in the era of AI with MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta property="og:image" content="https://metamindsjen.github.io/tcard.png">
+<meta property="og:url" content="https://metamindsjen.github.io">
+<meta property="og:type" content="website">
+
+<style>
+  :root {
+    --header-height: 100px; 
+	    --footer-height: 175px; 
+  }
+  
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .banner {
+    background-color: transparent;
+    background-size: cover;
+     height: calc(100% - 10px - var(--footer-height) - var(--header-height) - 10px);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 350px;
+  }
+
+  .banner-content {
+    background-color: rgba(255, 255, 255, 1);
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+	     padding-bottom: 40px; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    height: 100%;
+    animation: fadeIn 2s 0.5s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .banner-content h1,
+  .banner-content p {
+    margin: 0;
+  }
+
+  .banner-content h2 {
+    margin-top: 40px;
+  }
+	
+	.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+	
+	    .menu-container {
+      position: absolute;
+      top: calc (20px + var(--header-height)); /* Positioned below the .first-line */
+      left: 5px; /* Indented 30px from the left edge */
+			  z-index: 1000;
+    }
+	
+	.menu-toggle {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+
+}
+	    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+         background-color: transparent;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .menu-active {
+      display: block;
+    }
+	.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .first-line {
+    margin-bottom: auto;
+     background-color: rgba(255, 255, 255, 0.75); 
+	  color: black;
+    font-weight: bold;
+    font-size: 20pt; /* Make header font size same as h1 on banner */
+    text-align: left;
+    margin-left: 5px;
+    align-self: left;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 32px; /* Adjusted space between header text and menu */
+    left: 5px;
+    z-index: 1000;
+  }
+
+  .last-lines {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  .menu-button {
+    font-size: 20pt;
+    font-weight: bold;
+	    background-color: rgba(255, 255, 255, 0.75); 
+  }
+
+  .banner {
+    top: 70px;
+	height: 600px; 
+    width: 100%;
+  }
+
+  .banner-content {
+    width: 90%;
+   height: 90%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    z-index: 1001; /* Make sure the menu toggle is on top of the content */
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100vw; 
+    background-color: rgba(198, 150, 228, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .menu-active {
+    display: flex;
+  }
+
+  .menu .last-lines {
+    display: block;
+  }
+	.main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+	
+.submenu {
+  position: relative;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: none;
+  z-index: 1000;
+  left: 0;
+  margin-bottom: 10px;
+  min-width: 200px;
+}
+
+
+.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+
+}
+
+
+</style>
+
+	</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-content">
+      <div class="logo">
+        <h1 class="first-line"><a href="index.html"><strong>MetaMinds.app</strong></a></h1>
+      </div>
+     <div class="menu-container">
+  <button class="menu-button"><strong>Menu</strong></button>
+  <nav class="menu">
+     <ul>
+      <li><a href="index.html"><strong>home</strong></a></li>
+		      <li><a href="howtomm.html"><strong>try MetaMind</strong></a></li>
+		<li><a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a></li>
+     <li class="submenu-parent">
+        <a href="ourai.html"><strong>our ai</strong></a>
+        <ul class="submenu">
+          <li><a href="ourai.html#discord-ai"><strong>discord ai</strong></a></li>
+          <li><a href="ourai.html#hiveminds"><strong>hiveminds</strong></a></li>
+		 </ul></li>
+ <li><a href="faq.html"><strong>faq</strong></a></li>
+		  <li><a href="blogmain.html"><strong>blog</strong></a></li>
+      <li><a href="https://theuplift.world/discord/"><strong>contact us</strong></a></li>
+    </ul>
+  </nav>
+</div>
+
+    </div>
+    <div class="last-lines-wrapper">
+     <div class="last-lines">
+  <a href="howtomm.html"><strong>try MetaMind</strong></a>
+  <a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a>
+</div>
+    </div>
+  </div>
+</header>
+
+	<main>
+	</main>
+	<div class="main-container">
+  <div class="banner">
+    <div class="onepager">
+      <div class="banner-content">
+		
+			<h1 class="onepager-title">MetaMinds Blog</h1>
+
+ <img src="https://scarlet-top-woodpecker-471.mypinata.cloud/ipfs/QmVEKGC8wBJEB8LVoPdS9CCBMaTtgqo4KCF4tN9uTy8B1q?_gl=1*hkmnna*_ga*MTMxNzMwMzYxLjE2ODc1NDUyMDA.*_ga_5RMPXG14TE*MTY4Nzg3MzQ3NS4yLjAuMTY4Nzg3MzQ3NS42MC4wLjA." alt="Image description" class="centered-image"> <br>
+
+<p>By <a href="https://twitter.com/coreycottrell"><strong>@coreycottrell</strong></a></p>
+
+		  <br><p>I’m halfway through listening to Andreessen on the Lex pod and they were talking about the future of browsers in an age of growing walled garden experiences like FB etc, and it made me want to double down on the idea of having a metaminds.app native blog.   One we build ourselves using our AIs.  </p>
+<br>
+<p>I was pondering that for less than 5 minutes before the ideas started to pour in.  We can already make AI chatbots that have amazing context memory and hivemind thinking abilities that make them substantially superior to GPT3 and comparable to GPT4.  And we’ve built ways to “talk” to articles so our AIs can interact with new information in real time instead of being capped at 2021 like chat.GPT.  </p>
+<br>
+<p>So… once we have tons of articles on our blog focused on what we are building and all the research and advancements in AI we will have a local iteration of our MetaMinds AI that you’ll be able to talk to that will have that article in its context memory, and perhaps many of the other articles that share keywords. </p>
+<br>
+<p>Andreessen talked about the web browser being the portal to the open internet.  I love that idea.  We still can make any page we want. We can make it any way we want! And now with the ability for “non-coders” to code with GPT and other tools I believe we will see an explosion in new and amazing content on the internets!  Add in email subscriptions and you have a bullet-proof way to cultivate a community in a very antifragile way!!  And of course AI integrated into everything that benefits from intelligence on-demand.  Read: EVERYTHING. </p>
+<br>
+<p>So ya.  Jen (our resident super-powered-with-AI-new-coder) just created our blog setup yesterday.  And here we are! </p>
+<br>
+		<br><div class="features">
+<a href="blogmain.html" style="color: black; text-decoration: none; align-self: center;">Back to the MetaMinds.APP Community AI Blog</a>
+</div><br>
+</div>
+  </div>
+</div>
+</div>
+	<div class="footer">
+    <a href="https://theuplift.world/discord/" class="footer-link"><strong>try MetaMind</strong></a>
+		 <a href="https://hiveminds.app" class="footer-link"><strong>try hiveMinds.app</strong></a>
+        <a href="mailto:metamindsapp@gmail.com" class="footer-link"><strong>email us</strong></a>
+        <a href="https://twitter.com/MetaMindsAPP" target="_blank" rel="noopener noreferrer" class="twitter-follow-button"><span class="twitter-logo"><strong>follow us</strong></span></a>
+		<p><strong>copyright MetaMinds.app 2023</strong></p>
+	</div>
+<script>
+document.querySelector('.menu-button').addEventListener('click', function () {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('menu-active');
+});
+
+const submenuParent = document.querySelector('.submenu-parent');
+submenuParent.addEventListener('mouseenter', function () {
+  const submenu = this.querySelector('.submenu');
+  submenu.classList.toggle('submenu-active');
+});
+
+const mainMenuItems = document.querySelectorAll('.menu > ul > li > a');
+mainMenuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+const subMenuItems = document.querySelectorAll('.submenu a');
+subMenuItems.forEach(function (subMenuItem) {
+  subMenuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+</script>
+</body>
+</html>
+
+
+

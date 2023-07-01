@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="headerstyle.css">
+  <link rel="stylesheet" href="ouraibannerstyle.css">
+  <link rel="stylesheet" href="footerstyle.css">
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MetaMindsAPP">
+<meta name="twitter:creator" content="@MetaMindsAPP">
+<meta name="twitter:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta name="twitter:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta name="twitter:image" content="https://metamindsjen.github.io/tcard.png">
+	<!-- Open Graph meta tags -->
+<meta property="og:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta property="og:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta property="og:image" content="https://metamindsjen.github.io/tcard.png">
+<meta property="og:url" content="https://metamindsjen.github.io">
+<meta property="og:type" content="website">
+
+<style>
+  :root {
+    --header-height: 100px; 
+	    --footer-height: 175px; 
+  }
+  
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .banner {
+    background-color: transparent;
+    background-size: cover;
+     height: calc(100% - 10px - var(--footer-height) - var(--header-height) - 10px);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 350px;
+  }
+
+  .banner-content {
+    background-color: rgba(255, 255, 255, 1);
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+	     padding-bottom: 40px; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    height: 100%;
+    animation: fadeIn 2s 0.5s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .banner-content h1,
+  .banner-content p {
+    margin: 0;
+  }
+
+  .banner-content h2 {
+    margin-top: 40px;
+  }
+	
+	.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+	
+	    .menu-container {
+      position: absolute;
+      top: calc (20px + var(--header-height)); /* Positioned below the .first-line */
+      left: 5px; /* Indented 30px from the left edge */
+			  z-index: 1000;
+    }
+	
+	.menu-toggle {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+
+}
+	    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+         background-color: transparent;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .menu-active {
+      display: block;
+    }
+	.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+	.container {
+  display: flex;
+ flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+}
+.column {
+	width: 100%;
+	display: block;
+}
+.card-body {
+	max-width: 100%;
+	align-content: center;
+}
+.column-image {
+  max-width: 15%;
+  height: auto;
+		padding-right: 0px;
+		padding-left: 0px;
+}
+	.link-list {
+		  font-size: 20px;
+  font-weight: bold;
+		text-decoration-color: blue;
+		margin: 0 auto;
+ display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+		align-content: center;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	
+@media (max-width: 760px) {
+  .first-line {
+    margin-bottom: auto;
+     background-color: rgba(255, 255, 255, 0.75); 
+	  color: black;
+    font-weight: bold;
+    font-size: 20pt; /* Make header font size same as h1 on banner */
+    text-align: left;
+    margin-left: 5px;
+    align-self: left;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 32px; /* Adjusted space between header text and menu */
+    left: 5px;
+    z-index: 1000;
+  }
+
+  .last-lines {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  .menu-button {
+    font-size: 20pt;
+    font-weight: bold;
+	    background-color: rgba(255, 255, 255, 0.75); 
+  }
+
+  .banner {
+    top: 70px;
+	height: 600px; 
+    width: 100%;
+  }
+
+  .banner-content {
+    width: 90%;
+   height: 90%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    z-index: 1001; /* Make sure the menu toggle is on top of the content */
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100vw; 
+    background-color: rgba(198, 150, 228, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .menu-active {
+    display: flex;
+  }
+
+  .menu .last-lines {
+    display: block;
+  }
+	.main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+	
+.submenu {
+  position: relative;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: none;
+  z-index: 1000;
+  left: 0;
+  margin-bottom: 10px;
+  min-width: 200px;
+}
+
+
+.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+}
+
+
+</style>
+
+	</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-content">
+      <div class="logo">
+        <h1 class="first-line"><a href="index.html"><strong>MetaMinds.app</strong></a></h1>
+      </div>
+     <div class="menu-container">
+  <button class="menu-button"><strong>Menu</strong></button>
+  <nav class="menu">
+     <ul>
+      <li><a href="index.html"><strong>home</strong></a></li>
+		      <li><a href="howtomm.html"><strong>try MetaMind</strong></a></li>
+		<li><a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a></li>
+     <li class="submenu-parent">
+        <a href="ourai.html"><strong>our ai</strong></a>
+        <ul class="submenu">
+          <li><a href="ourai.html#discord-ai"><strong>discord ai</strong></a></li>
+          <li><a href="ourai.html#hiveminds"><strong>hiveminds</strong></a></li>
+		 </ul></li>
+ <li><a href="faq.html"><strong>faq</strong></a></li>
+				 <li><a href="blogmain.html"><strong>blog</strong></a></li>
+      <li><a href="contactus.html"><strong>contact us</strong></a></li>
+    </ul>
+  </nav>
+</div>
+
+    </div>
+    <div class="last-lines-wrapper">
+     <div class="last-lines">
+  <a href="howtomm.html"><strong>try MetaMind</strong></a>
+  <a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a>
+</div>
+    </div>
+  </div>
+</header>
+
+	<main>
+	</main>
+	<div class="main-container">
+  <div class="banner">
+    <div class="onepager">
+      <div class="banner-content">
+		
+			<div class="onepager-p">
+		
+		  <img src="combot.png" alt="Image description" class="centered-image-1"> <br>
+	
+    <p>At Metaminds, we're a small, dedicated team 🧑‍💻👩‍💻 working passionately behind the scenes to bring our AI friends to life 🤖✨ Our mission is to provide you with exceptional, personalized AI solutions that truly elevate your digital experience 🌐💎 While we remain discreetly in the background, we're always here to support you and ensure your satisfaction 😌🌟 Feel free to connect with us via email 📧 or Twitter 🐦 for any inquiries, feedback or just to say hi! 💌 Let's make the digital world a more refined and delightful place together 🌟😉</p><br>
+
+		  <img src="contactus.jpg" alt="blue bird and mail box with a face" class="centered-image-2"> <br>
+		  </div>
+				<div class="container">
+          		    <div class="column">
+						 
+     <ul class="link-list">
+				<p><a href="https://twitter.com/MetaMindsAPP"><strong>@MetaMindsAPP</strong></a></p>
+                <p><a href="https://twitter.com/ramsus"><strong>@ramsus</strong></a></p>
+				<p><a href="https://twitter.com/coreycottrell"><strong>@coreycottrell</strong></a></p>
+				<p><a href="https://twitter.com/20011981"><strong>@20011981</strong></a></p>
+				<p><a href="mailto:metamindsapp@gmail.com"><strong>Email Us</strong></a></p><br><br>
+            </ul>
+        </div>
+	</div>
+		  <div class="card-body">
+     <br> <a class="twitter-timeline" href="https://twitter.com/MetaMindsAPP?ref_src=twsrc%5Etfw">Tweets by MetaMindsAPP</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+    </div>
+	
+		  	</div>
+			</div>
+	  	</div>
+			</div>
+
+	<div class="footer">
+    <a href="https://theuplift.world/discord/" class="footer-link"><strong>try MetaMind</strong></a>
+		 <a href="https://hiveminds.app" class="footer-link"><strong>try hiveMinds.app</strong></a>
+        <a href="mailto:metamindsapp@gmail.com" class="footer-link"><strong>email us</strong></a>
+        <a href="https://twitter.com/MetaMindsAPP" target="_blank" rel="noopener noreferrer" class="twitter-follow-button"><span class="twitter-logo"><strong>follow us</strong></span></a>
+		<p><strong>copyright MetaMinds.app 2023</strong></p>
+	</div>
+<script>
+document.querySelector('.menu-button').addEventListener('click', function () {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('menu-active');
+});
+
+const submenuParent = document.querySelector('.submenu-parent');
+submenuParent.addEventListener('mouseenter', function () {
+  const submenu = this.querySelector('.submenu');
+  submenu.classList.toggle('submenu-active');
+});
+
+const mainMenuItems = document.querySelectorAll('.menu > ul > li > a');
+mainMenuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+const subMenuItems = document.querySelectorAll('.submenu a');
+subMenuItems.forEach(function (subMenuItem) {
+  subMenuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+</script>
+</body>
+</html>

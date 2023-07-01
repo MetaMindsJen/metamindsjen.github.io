@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="headerstyle.css">
+  <link rel="stylesheet" href="onepagerstyles.css">
+  <link rel="stylesheet" href="footerstyle.css">
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MetaMindsAPP">
+<meta name="twitter:creator" content="@MetaMindsAPP">
+<meta name="twitter:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta name="twitter:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta name="twitter:image" content="https://metamindsjen.github.io/tcard.png">
+	<!-- Open Graph meta tags -->
+<meta property="og:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta property="og:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta property="og:image" content="https://metamindsjen.github.io/tcard.png">
+<meta property="og:url" content="https://metamindsjen.github.io">
+<meta property="og:type" content="website">
+
+<style>
+  :root {
+    --header-height: 100px; 
+	    --footer-height: 175px; 
+  }
+  
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .banner {
+    background-color: transparent;
+    background-size: cover;
+     height: calc(100% - 10px - var(--footer-height) - var(--header-height) - 10px);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 350px;
+  }
+
+  .banner-content {
+    background-color: rgba(255, 255, 255, 1);
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+	     padding-bottom: 40px; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    height: 100%;
+    animation: fadeIn 2s 0.5s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .banner-content h1,
+  .banner-content p {
+    margin: 0;
+  }
+
+  .banner-content h2 {
+    margin-top: 40px;
+  }
+	
+	.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+	
+	    .menu-container {
+      position: absolute;
+      top: calc (20px + var(--header-height)); /* Positioned below the .first-line */
+      left: 5px; /* Indented 30px from the left edge */
+			  z-index: 1000;
+    }
+	
+	.menu-toggle {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+
+}
+	    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+         background-color: transparent;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .menu-active {
+      display: flex;
+    }
+	.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .first-line {
+    margin-bottom: auto;
+     background-color: rgba(255, 255, 255, 0.75); 
+	  color: black;
+    font-weight: bold;
+    font-size: 20pt; /* Make header font size same as h1 on banner */
+    text-align: left;
+    margin-left: 5px;
+    align-self: left;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 32px; /* Adjusted space between header text and menu */
+    left: 5px;
+    z-index: 1000;
+  }
+
+  .last-lines {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  .menu-button {
+    font-size: 20pt;
+    font-weight: bold;
+	    background-color: rgba(255, 255, 255, 0.75); 
+  }
+
+  .banner {
+    top: 70px;
+	height: 600px; 
+    width: 100%;
+  }
+
+  .banner-content {
+    width: 90%;
+   height: 90%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    z-index: 1001; /* Make sure the menu toggle is on top of the content */
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100vw; 
+    background-color: rgba(198, 150, 228, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .menu-active {
+    display: flex;
+  }
+
+  .menu .last-lines {
+    display: flex;
+  }
+	.main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+	
+.submenu {
+  position: relative;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: none;
+  z-index: 1000;
+  left: 0;
+  margin: 10px;
+  min-width: 200px;
+}
+
+
+.footer {
+  height: var(--footer-height);
+  margin: 0;
+}
+}
+
+
+</style>
+
+
+	</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-content">
+      <div class="logo">
+        <h1 class="first-line"><a href="index.html"><strong>MetaMinds.app</strong></a></h1>
+      </div>
+     <div class="menu-container">
+  <button class="menu-button"><strong>Menu</strong></button>
+  <nav class="menu">
+     <ul>
+      <li><a href="index.html"><strong>home</strong></a></li>
+		      <li><a href="howtomm.html"><strong>try MetaMind</strong></a></li>
+		<li><a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a></li>
+     <li class="submenu-parent">
+        <a href="ourai.html"><strong>our ai</strong></a>
+        <ul class="submenu">
+          <li><a href="ourai.html#discord-ai"><strong>discord ai</strong></a></li>
+          <li><a href="ourai.html#hiveminds"><strong>hiveminds</strong></a></li>
+		 </ul></li>
+ <li><a href="faq.html"><strong>faq</strong></a></li>
+			 <li><a href="blogmain.html"><strong>blog</strong></a></li>
+      <li><a href="contactus.html"><strong>contact us</strong></a></li>
+    </ul>
+  </nav>
+</div>
+
+    </div>
+    <div class="last-lines-wrapper">
+     <div class="last-lines">
+  <a href="howtomm.html"><strong>try MetaMind</strong></a>
+  <a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a>
+</div>
+    </div>
+  </div>
+</header>
+
+	<main>
+	</main><div class="main-container">
+  <div class="banner">
+    <div class="onepager">
+      <div class="banner-content">
+		
+			
+	<p class="intro">Frequently Asked Questions</p>
+<h2>Q: Why does my AI make up info it doesn't know?</h2>
+    <p>A: The AI may occasionally generate information it doesn't know because it's designed to provide a response based on the context and patterns in the data it was trained on. Some commands have a form of long-term memory through log searches. Usually those searches look for your whole command (after the !command) and if they don’t find a specific match, they start looking for any word in your command. This can sometimes lead to plausible-sounding but incorrect answers. </p>
+
+    <h2>Q: If I give him the right answer, will he remember?</h2>
+  <p>A: The AI will retain the information in the context thread and short-term memory, but not long-term memory. We're working on improving this aspect. Currently, you can use !truth and !lies commands to establish facts. Generally, !truth works better. We also pre-load our AIs with information about their respective communities. </p>
+
+    <h2>Q: If you add him to another server, do you configure him specifically for that server? Or is it the same bot with the information from the previous server?</h2>
+   <p>A: Absolutely, we fully customize the AI for each server. It will have a new personality based on your community and a new mission aligned with your project, which it will consistently refer back to.</p>
+
+    <h2>Q: What's the best way to reach out to you?</h2>
+    
+      <p>A: You can reach us via Discord.</p>
+   
+
+    <h2>Q: Do you have a basic guide on how to give AI prompts?</h2>
+    <p>Here's a step-by-step guide for composing the perfect prompt, even for someone who is new to AI or speaks English as a second language:
+</p>
+<ul class="features">
+      <li>Be clear and concise: Start by clearly stating your question or request. Keep your sentences short and to the point, so the AI can easily understand what you're asking.</li>
+      <li>Provide context: Give some background information or context to help the AI understand the topic better. This can include relevant details, examples, or explanations.</li>
+      <li>Specify the format: If you have a preferred format for the AI's response, make it explicit. For instance, you may want the answer in a list, a paragraph, or a step-by-step guide.</li>
+      <li>Ask for examples or explanations: If you'd like the AI to provide examples or further explanations in its response, make sure to request them in your prompt.</li>
+	<li>Keep it focused: Avoid asking multiple questions or covering too many topics in a single prompt. This can confuse the AI and result in less accurate or less relevant responses.</li>
+    </ul>
+		  <p>Here's an example prompt following these guidelines:
+</p><br>
+		  <p>"Can you please explain the process of photosynthesis in plants, step by step? I'd like a simple explanation with an example for each step, suitable for someone with no background in biology."</p><br>
+		  <p>By following these steps, you'll be able to craft effective prompts that help the AI provide the information or assistance you need.</p>
+    <h2>Q: If I go to the general ChatGPT website and ask the hivemind questions like !marketingteam, !techteam, !contentcreator, will the AI provide similar responses?</h2>
+    <p>A: You can try it, but the responses will likely be less focused and come from a single perspective. You may need to rerun the answers for further analysis. Nonetheless, it will likely still provide decent information.</p>
+			
+<h2>Q: So, my main question is: You said you could create a fully personalized AI for our community. How different will it be from the one in your community?</h2>
+    <p>A: The AI you were just chatting with in our community is Mindy. We would create a completely new version for you. It's like a pet or sub-mind that constantly communicates with its parent AI. We load it with all new data, enabling it to understand your specific community and answer questions accordingly. We also adapt 50+ system prompts to align the new AI with your mission, values, and community, essentially creating new personas for both the primary AI and the sub-mind.</p>
+		  <h2>Q: I see. When did you implement it on your server? Is it fairly new? Should we wait for you to improve it further before adding it to our server? What are your thoughts on this?</h2>
+    <p>A: The AI improves faster with increased usage, and we believe it's already very effective. Here's a <a href="https://docs.google.com/document/d/1-2k7ko3IUP183dxS-Ahup_Zp2Ekp0qKyMdwv4pk-N9o/edit?usp=drivesdk">link to a document</a> the AI wrote when MetaMind was about 2 weeks old, and Aya and Avisriel were 1 week old. </p>
+		  <h2>Q: If you add it to our server, will you check it regularly, or just check it if we provide feedback or ask for changes?</h2>
+    <p>A: We can initially designate the AI to a beta test channel to minimize disruption in your server if you have concerns. Rest assured, we'll be highly attentive to the AI's performance on your server. We value our relationship with your server and are committed to ensuring its success, so we'll be laser-focused on monitoring and optimizing the AI.</p>	
+<br>
+  </div>
+  </div>  </div>
+		</div>
+	<div class="footer">
+    <a href="https://theuplift.world/discord/" class="footer-link"><strong>try MetaMind</strong></a>
+		 <a href="https://hiveminds.app" class="footer-link"><strong>try hiveMinds.app</strong></a>
+        <a href="mailto:metamindsapp@gmail.com" class="footer-link"><strong>email us</strong></a>
+        <a href="https://twitter.com/MetaMindsAPP" target="_blank" rel="noopener noreferrer" class="twitter-follow-button"><span class="twitter-logo"><strong>follow us</strong></span></a>
+		<p><strong>copyright MetaMinds.app 2023</strong></p>
+	</div>
+<script>
+document.querySelector('.menu-button').addEventListener('click', function () {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('menu-active');
+});
+
+const submenuParent = document.querySelector('.submenu-parent');
+submenuParent.addEventListener('mouseenter', function () {
+  const submenu = this.querySelector('.submenu');
+  submenu.classList.toggle('submenu-active');
+});
+
+const mainMenuItems = document.querySelectorAll('.menu > ul > li > a');
+mainMenuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+const subMenuItems = document.querySelectorAll('.submenu a');
+subMenuItems.forEach(function (subMenuItem) {
+  subMenuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+</script>
+</body>
+</html>
