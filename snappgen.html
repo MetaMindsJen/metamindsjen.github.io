@@ -125,6 +125,19 @@
     .menu-active {
       display: block;
     }
+	
+	.btn btn-primary .btn btn-success {
+  background-color: #93faf6;
+  color: #1c1c1c;
+  font-family: 'Major Mono Display', monospace;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+	border: 2px solid #908ff9;
+  font-size: 25px;
+  transition: background-color 0.2s;
+}
+
 	.footer {
   height: var(--footer-height);
   margin: 0;
@@ -250,7 +263,7 @@
       <li><a href="index.html"><strong>home</strong></a></li>
 		      <li><a href="howtomm.html"><strong>try MetaMind</strong></a></li>
 		<li><a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a></li>
-		  <li><a href="https://appgen.app"><strong>try appgen.app</strong></a></li>
+		  <li><a href="snappgen.html"><strong>try appgen.app</strong></a></li>
      <li class="submenu-parent">
         <a href="ourai.html"><strong>our ai</strong></a>
         <ul class="submenu">
@@ -269,7 +282,7 @@
      <div class="last-lines">
   <a href="howtomm.html"><strong>try MetaMind</strong></a>
   <a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a>
-		 	 <a href="https://appgen.app"><strong>try appgen.app</strong></a>
+		 	 <a href="snappgen.html"><strong>try appgen.app</strong></a>
 </div>
     </div>
   </div>
@@ -288,11 +301,12 @@
 		  
 		 <div class="jumbotron jumbotron-fluid bg-dark text-white"> 
 			 <div class="container"> 
-				 <h1 class="display-4 text-center">Snappgen</h1>  
+				 <h1 class="display-4 text-center"><strong>Snappgen</strong></h1>  
 			 <div class="container"> 
 				 <div class="row"> 
 					 <div class="col-md-6 mx-auto"> 
 						 <div class="text-center"> 
+							 <p>Instructions: Make a face at the camera and press the Take Picture button. Below your snazzy picture is a box for entering text that will appear on the bottom of your picture. Type whatever you want and click submit to put it on your picture. Use the download button to save your picture. </p>
 							 <button id="captureButton" class="btn btn-primary">Take Picture</button> <br> 
 							 <canvas id="pictureCanvas" width="640" height="480"></canvas> <br> 
 							 <textarea id="textInput" class="form-control" rows="3" placeholder="Enter text for the picture"></textarea> <br> 
@@ -336,7 +350,7 @@
   <div id="buttons-container">  
 	  <a href="https://bit.ly/MetaMindsApp" class="footer-link"><strong>try MetaMind</strong></a>
 		 <a href="https://hiveminds.app" class="footer-link"><strong>try hiveMinds.app</strong></a>
-		 <a href="https://appgen.app" class="footer-link"><strong>try appgen.app</strong></a>
+		 <a href="snappgen.html" class="footer-link"><strong>try appgen.app</strong></a>
         <a href="mailto:metamindsapp@gmail.com" class="footer-link"><strong>email us</strong></a>
         <a href="https://twitter.com/MetaMindsAPP" target="_blank" rel="noopener noreferrer" class="twitter-follow-button"><span class="twitter-logo"><strong>follow us</strong></span></a>
 	</div>
