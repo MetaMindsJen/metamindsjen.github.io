@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Getting Started With MetaMind</title>
+  <title>Try Appgen.app!</title>
    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -126,7 +126,7 @@
       display: block;
     }
 	
-	.btn btn-primary .btn btn-success {
+	.btn {
   background-color: #93faf6;
   color: #1c1c1c;
   font-family: 'Major Mono Display', monospace;
@@ -296,22 +296,21 @@
     <div class="onepager">
       <div class="banner-content">
 		  
-		<h1 class="onepager-title"><a href="https://appgen.app">Click here to try Appgen NOW!</a> or continue scrolling to test an app made with Appgen!</h1><br>
-<p class="intro">Snappgen: a No Code Text to App made in 30 seconds with Appgen.app!</p>
-		  
+		<h1 class="onepager-title"><a href="https://appgen.app">Click here to try Appgen NOW!</a> or continue scrolling to test an app made with Appgen!</h1><br> 
 		 <div class="jumbotron jumbotron-fluid bg-dark text-white"> 
 			 <div class="container"> 
-				 <h1 class="display-4 text-center"><strong>Snappgen</strong></h1>  
+				 <h1 class="display-4 text-center"><strong>Snappgen</strong></h1>  <br>
+				 <h1>A No Code Text to App made in 30 seconds with Appgen.app!</h1> <br>
 			 <div class="container"> 
 				 <div class="row"> 
 					 <div class="col-md-6 mx-auto"> 
 						 <div class="text-center"> 
-							 <p>Instructions: Make a face at the camera and press the Take Picture button. Below your snazzy picture is a box for entering text that will appear on the bottom of your picture. Type whatever you want and click submit to put it on your picture. Use the download button to save your picture. </p>
-							 <button id="captureButton" class="btn btn-primary">Take Picture</button> <br> 
+							 <p>Instructions: Make a face at the camera and press the Take Picture button. Below your snazzy picture is a box for entering text that will appear on the bottom of your picture. Type whatever you want and click submit to put it on your picture. Use the download button to save your picture. </p> <br>
+							 <button id="captureButton" class="btn btn-primary"><strong>take picture</strong></button> <br> 
 							 <canvas id="pictureCanvas" width="640" height="480"></canvas> <br> 
 							 <textarea id="textInput" class="form-control" rows="3" placeholder="Enter text for the picture"></textarea> <br> 
-							 <button id="submitButton" class="btn btn-success">Submit</button> 
-							 <button id="downloadButton" class="btn btn-primary" disabled>Download</button> </div> </div> </div> </div> </div> 
+							 <button id="submitButton" class="btn btn-success"><strong>submit</strong></button> 
+							 <button id="downloadButton" class="btn btn-primary" disabled><strong>download</strong></button> </div> </div> </div> </div> </div> 
 			 <script> const captureButton = document.getElementById('captureButton'); const pictureCanvas = document.getElementById('pictureCanvas'); const textInput = document.getElementById('textInput'); const submitButton = document.getElementById('submitButton'); const downloadButton = document.getElementById('downloadButton'); const canvasContext = pictureCanvas.getContext('2d'); // Get access to the camera 
 				 navigator.mediaDevices.getUserMedia({ video: true }) .then(stream => { const video = document.createElement('video'); video.srcObject = stream; video.play(); captureButton.addEventListener('click', () => { canvasContext.drawImage(video, 0, 0, pictureCanvas.width, pictureCanvas.height); video.pause(); stream.getTracks().forEach(track => track.stop()); captureButton.disabled = true; textInput.disabled = false; submitButton.disabled = false; }); }) .catch(error => { console.error('Error accessing camera:', error); }); // Add text to the picture 
 				 submitButton.addEventListener('click', () => { const text = textInput.value.trim(); if (text) { const textSize = 24; const textMargin = 10; const textX = textMargin; const textY = pictureCanvas.height - textMargin; const textWidth = pictureCanvas.width - (2 * textMargin); canvasContext.font = `${textSize}px Arial`; canvasContext.textBaseline = 'bottom'; canvasContext.fillStyle = 'rgba(0, 0, 0, 0.5)'; canvasContext.fillRect(0, pictureCanvas.height - (textSize + (2 * textMargin)), pictureCanvas.width, textSize + (2 * textMargin)); canvasContext.fillStyle = 'white'; canvasContext.fillText(text, textX, textY, textWidth); submitButton.disabled = true; downloadButton.disabled = false; } }); // Download the picture 
