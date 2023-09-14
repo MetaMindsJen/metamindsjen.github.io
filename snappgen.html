@@ -143,6 +143,27 @@
   margin: 0;
 }
 
+	 .jumbotron { 
+		 background-color: transparent; 
+		 color: white; 
+		 text-align: center; 
+	} 
+	
+	.container { 
+		margin-top: 20px; 
+	} 
+	
+	#captureButton { 
+		margin-bottom: 10px; 
+	} 
+	
+	@media (max-aspect-ratio: 2/3) { 
+		#pictureCanvas { 
+			width: 100%; 
+			height: auto; 
+		} 
+	}
+	
 @media (max-width: 760px) {
   .first-line {
     margin-bottom: auto;
@@ -297,15 +318,15 @@
       <div class="banner-content">
 		  
 		<h1 class="onepager-title"><a href="https://appgen.app">Click here to try Appgen NOW!</a> or continue scrolling to test an app made with Appgen!</h1><br> 
+		   <h1 class="display-4 text-center"><strong>Snappgen</strong></h1>  <br>
+				 <h1>A No Code Text to App made in 30 seconds with Appgen.app!</h1> <br>
+				  <p><strong>Instructions:</strong> Make a face at the camera and press the Take Picture button. Below your snazzy picture is a box for entering text that will appear on the bottom of your picture. Type whatever you want and click submit to put it on your picture. Use the download button to save your picture. </p> 
 		 <div class="jumbotron jumbotron-fluid bg-dark text-white"> 
 			 <div class="container"> 
-				 <h1 class="display-4 text-center"><strong>Snappgen</strong></h1>  <br>
-				 <h1>A No Code Text to App made in 30 seconds with Appgen.app!</h1> <br>
 			 <div class="container"> 
 				 <div class="row"> 
 					 <div class="col-md-6 mx-auto"> 
 						 <div class="text-center"> 
-							 <p>Instructions: Make a face at the camera and press the Take Picture button. Below your snazzy picture is a box for entering text that will appear on the bottom of your picture. Type whatever you want and click submit to put it on your picture. Use the download button to save your picture. </p> <br>
 							 <button id="captureButton" class="btn btn-primary"><strong>take picture</strong></button> <br> 
 							 <canvas id="pictureCanvas" width="640" height="480"></canvas> <br> 
 							 <textarea id="textInput" class="form-control" rows="3" placeholder="Enter text for the picture"></textarea> <br> 
