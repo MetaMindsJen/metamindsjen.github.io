@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community AI Blog</title>
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="leadstyle.css"> 
+	<link rel="stylesheet" href="headerstyleai.css">
+  <link rel="stylesheet" href="ouraibannerstyle.css">
+	<link rel="stylesheet" href="blogcards.css">
+  <link rel="stylesheet" href="footerstyle.css">
+	<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="footerstyle.css">
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MetaMindsAPP">
+<meta name="twitter:creator" content="@MetaMindsAPP">
+<meta name="twitter:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta name="twitter:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta name="twitter:image" content="https://metamindsjen.github.io/tcard.png">
+	<!-- Open Graph meta tags -->
+<meta property="og:title" content="MetaMinds.APP Bespoke AI Solutions">
+<meta property="og:description" content="MetaMinds: Bespoke 🤖 AI agents for your Discord communities! 🎮 Boost engagement 💬, unique tools 🛠️ & multilingual support 🚀">
+<meta property="og:image" content="https://metamindsjen.github.io/tcard.png">
+<meta property="og:url" content="https://metamindsjen.github.io">
+<meta property="og:type" content="website">
+<!-- Import compat versions -->
+<!-- Import the necessary Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+
+
+<style>
+  :root {
+    --header-height: 100px; 
+	    --footer-height: 175px; 
+  }
+  
+ .cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+	
+
+@media (max-width: 760px) {
+
+	 .card {
+    flex-basis: calc(100% - 20px);
+  }
+	
+	.main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+	
+}
+
+
+</style>
+
+	</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-content">
+      <div class="logo">
+        <h1 class="first-line"><a href="index.html"><strong>MetaMinds.app</strong></a></h1>
+      </div>
+     <div class="menu-container">
+  <button class="menu-button"><strong>Menu</strong></button>
+  <nav class="menu">
+     <ul>
+      <li><a href="index.html"><strong>home</strong></a></li>
+		      <li><a href="howtomm.html"><strong>try MetaMind</strong></a></li>
+		<li><a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a></li>
+		  <li><a href="snappgen.html"><strong>try appgen.app</strong></a></li>
+		 			 <li><a href="aboutus.html"><strong>about us</strong></a></li>
+     <li class="submenu-parent">
+        <a href="ourai.html"><strong>our ai</strong></a>
+        <ul class="submenu">
+          <li><a href="ourai.html#discord-ai"><strong>discord ai</strong></a></li>
+          <li><a href="ourai.html#hiveminds"><strong>hiveminds</strong></a></li>
+		 </ul></li>
+ <li><a href="faq.html"><strong>faq</strong></a></li>
+      <li><a href="contactus.html"><strong>contact us</strong></a></li>
+    </ul>
+  </nav>
+</div>
+
+    </div>
+    <div class="last-lines-wrapper">
+     <div class="last-lines">
+  <a href="howtomm.html"><strong>try MetaMind</strong></a>
+  <a href="https://hiveminds.app"><strong>try hiveMinds.app</strong></a>  
+		 <a href="snappgen.html"><strong>try appgen.app</strong></a>
+</div>
+    </div>
+  </div>
+</header>
+	<main>
+	</main>
+	<div class="main-container">
+  <div class="banner">
+    <div class="onepager">
+      <div class="banner-content">
+		
+			<h1 class="onepager-title">METAMINDS BLOG</h1>
+		    <img src="blogmain.png" alt="Image description" class="centered-image"> 
+		  <br><p>Welcome to our blog!</p>
+		  <br>
+		  <p>Do you have a story that needs to be featured on our blog? Submit it <a href="https://forms.gle/jw9L43YwVf23FbBb6" style="color: #402078; text-decoration: none;"><strong>here!</strong></a></p>
+		<br>
+		  <h1>BLOG POSTS</h1>
+		  <br>
+		 	<div class="cards-container"></div>
+		 <br><br><br> </div>
+		  		</div>
+  </div>
+	   </div>
+	
+	<div class="footer">
+		<div id="footer-container">
+		<div id="mc_embed_signup">
+    <form action="https://app.us11.list-manage.com/subscribe/post?u=759c31ce4ece256dd7cc4a37f&amp;id=eb53df11c3&amp;f_id=008e9de0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+            <h1>subscribe to our newsletter</h1>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div id="mc-field-group"><div class="mc-field-group">
+                <label for="mce-EMAIL"><strong>email address </strong><span class="asterisk">*</span></label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-embedded-subscribe" value="subscribe">
+                <a href="http://eepurl.com/iuUlIw" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="referral badge"></a>
+            </div>
+				</div>
+            <div id="mce-responses" class="clear foot">
+                <div class="response" id="mce-error-response" style="display: none;"></div>
+                <div class="response" id="mce-success-response" style="display: none;"></div>
+            </div>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                <input type="text" name="b_759c31ce4ece256dd7cc4a37f_eb53df11c3" tabindex="-1" value="">
+            </div>
+        </div>
+    </form>
+</div>
+  <div id="buttons-container">  
+	  <a href="https://bit.ly/MetaMindsApp" class="footer-link"><strong>try MetaMind</strong></a>
+		 <a href="https://hiveminds.app" class="footer-link"><strong>try hiveMinds.app</strong></a>
+	   <a href="https://appgen.app" class="footer-link"><strong>try appgen.app</strong></a>
+        <a href="mailto:metamindsapp@gmail.com" class="footer-link"><strong>email us</strong></a>
+        <a href="https://twitter.com/MetaMindsAPP" target="_blank" rel="noopener noreferrer" class="twitter-follow-button"><span class="twitter-logo"><strong>follow us</strong></span></a>
+	</div>
+			<div id="copyright">
+		<p><strong>copyright MetaMinds.app 2023</strong></p>
+			</div>
+		</div>
+		</div>
+	<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+<script>
+document.querySelector('.menu-button').addEventListener('click', function () {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('menu-active');
+});
+
+const submenuParent = document.querySelector('.submenu-parent');
+submenuParent.addEventListener('mouseenter', function () {
+  const submenu = this.querySelector('.submenu');
+  submenu.classList.toggle('submenu-active');
+});
+
+const mainMenuItems = document.querySelectorAll('.menu > ul > li > a');
+mainMenuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+const subMenuItems = document.querySelectorAll('.submenu a');
+subMenuItems.forEach(function (subMenuItem) {
+  subMenuItem.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu-active');
+  });
+});
+
+</script>
+	
+	<div id="cards"></div>
+
+<script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+	
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCGjd6auWcYW7xvxbl6hplGLfGahI46Xmw",
+  authDomain: "mmblog-3f473.firebaseapp.com",
+  projectId: "mmblog-3f473",
+  storageBucket: "mmblog-3f473.appspot.com",
+  messagingSenderId: "142543763377",
+  appId: "1:142543763377:web:6c0329330ba237aae0af90",
+  measurementId: "G-1XXCR5ESFG"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore(app);
+
+const collectionRef = collection(db, "blogPosts");
+getDocs(collectionRef).then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const image = data.image;
+        const title = data.title;
+        const description = data.description;
+        const url = data.URL;
+
+        const newCard = document.createElement('div');
+        newCard.className = 'card';
+
+        const newImage = document.createElement('img');
+        newImage.className = 'centered-image';
+        newImage.src = image;
+
+        const newCardContent = document.createElement('div');
+        newCardContent.className = 'card-content';
+
+        const newCardTitle = document.createElement('h1');
+        newCardTitle.className = 'card-title';
+        newCardTitle.innerText = title;
+
+        const newCardText = document.createElement('p');
+        newCardText.className = 'card-excerpt';
+        newCardText.innerText = description;
+
+        const newCardLink = document.createElement('a');
+        newCardLink.href = url;
+        newCardLink.className = 'card-link';
+        newCardLink.innerText = 'Read more';
+
+        newCardContent.appendChild(newCardTitle);
+        newCardContent.appendChild(newCardText);
+        newCardContent.appendChild(newCardLink);
+
+        newCard.appendChild(newImage);
+        newCard.appendChild(newCardContent);
+
+        const cardsContainer = document.querySelector('.cards-container');
+        cardsContainer.appendChild(newCard);
+    });
+});
+   
+</script>
+
+</body>
+</html>
