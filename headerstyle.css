@@ -71,6 +71,29 @@ h1 {
   text-decoration: none;
 }
 
+.mobile-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.close-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 
 .flash-button, .last-lines {
   align-self: right;
@@ -228,6 +251,9 @@ margin: 10px;
 
 
 @media (max-width: 760px) {
+    .mobile-popup {
+        display: block; /* Show the pop-up */
+    }
 	
   .first-line {
     margin-bottom: auto;
@@ -250,38 +276,7 @@ margin: 10px;
 	 .last-lines {
     display: none;
   }
-@keyframes flash {
-	0% {
-		background-color: #eaff03;
-		color: #002531;
-			border: 2px solid #002531;
-	}
-	50% {
-		background-color: #002531;
-		color: #eaff03;
-			border: 2px solid #eaff03;
-	}
-	100% {
-		background-colour: #eaff03;
-		color: #002531;
-			border: 2px solid #002531;
-	}
-	}
 
-.flash-button.flashing {
-	animation: flash 1s linear 10;
-  font-family: 'Major Mono Display', monospace;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 25px;
-	  align-self: right;
-  text-align: center;
-  margin-top: auto;
-  display: flex;
-	flex-direction: column;
-  gap: 10px; /* Add space between buttons */
-}
 	 .menu-button {
     font-size: 20pt;
     font-weight: bold;
