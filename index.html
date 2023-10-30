@@ -115,6 +115,12 @@
 </header>
 	<main>
 	</main>
+	<!-- Pop-up for Mobile -->
+<div id="mobile-popup" class="mobile-popup">
+    <button id="close-popup" class="close-popup">X</button>
+    <a href="https://bit.ly/MetaMindApp" class="flash-button">try our ai for free now!</a>
+</div>
+
 	<div class="main-container">
   <div class="banner">
     <div class="onepager">
@@ -283,5 +289,11 @@ getDocs(collectionRef).then((querySnapshot) => {
     }, 10000);
   });
 </script>
+	<script>
+  document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('mobile-popup').style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
