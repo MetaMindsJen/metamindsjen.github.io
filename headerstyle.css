@@ -75,8 +75,10 @@ h1 {
     display: none; /* Hidden by default */
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 90%;
+	left: 5%;
+	right: 5%;
+	box-sizing: border-box;
     background-color: white;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     padding: 15px;
@@ -86,8 +88,8 @@ h1 {
 
 .close-popup {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     border: none;
     background-color: transparent;
     font-size: 20px;
@@ -122,6 +124,11 @@ h1 {
 
 .flash-button, .last-lines + h1 {
   margin-top: 0;
+}
+
+.flash button {
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 @keyframes flash {
