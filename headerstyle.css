@@ -260,7 +260,12 @@ margin: 10px;
 
 @media (max-width: 760px) {
     .mobile-popup {
-        display: block; /* Show the pop-up */
+        display: flex; /* Show the pop-up */  	
+	flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+	    white-space: normal;
+	    overflow: visible;
     }
 .flash-button2 {
 max-width: 700px;
@@ -274,7 +279,6 @@ background-color: #93faf6;
   font-size: 25px;
   transition: background-color 0.2s;
 	margin: 0 auto;
-	flex-wrap: wrap;
 }
 
 .flash-button2:hover {
