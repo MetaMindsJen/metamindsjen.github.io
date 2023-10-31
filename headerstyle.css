@@ -262,7 +262,7 @@ margin: 10px;
     .mobile-popup {
         display: block; /* Show the pop-up */
     }
-	flash-button {
+	.flash-button {
 	max-width: 700px;
 	margin: 0 auto;
 }
@@ -285,7 +285,7 @@ margin: 10px;
 	}
 	}
 
-flash-button.flashing {
+.flash-button.flashing {
 	animation: flash 1s linear 10;
   font-family: 'Major Mono Display', monospace;
   text-decoration: none;
