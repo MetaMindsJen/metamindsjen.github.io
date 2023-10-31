@@ -118,7 +118,7 @@
 	<!-- Pop-up for Mobile -->
 <div id="mobile-popup" class="mobile-popup">
     <button id="close-popup" class="close-popup">X</button>
-    <a href="https://bit.ly/MetaMindApp" class="flash-button">try our ai for free now!</a>
+    <a href="https://bit.ly/MetaMindApp" class="flash-button2">try our ai for free now!</a>
 </div>
 
 	<div class="main-container">
@@ -289,7 +289,19 @@ getDocs(collectionRef).then((querySnapshot) => {
     }, 10000);
   });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var flashButton2 = document.querySelector('.flash-button2');
 
+    // Start the animation
+    flashButton2.classList.add('flashing');
+
+    // Stop the animation after 20 seconds
+    setTimeout(function() {
+      flashButton2.classList.remove('flashing');
+    }, 10000);
+  });
+</script>
 	<script>
   document.getElementById('close-popup').addEventListener('click', function() {
     document.getElementById('mobile-popup').style.display = 'none';
