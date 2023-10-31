@@ -264,7 +264,24 @@ margin: 10px;
     }
 	.flash-button {
 	max-width: 700px;
+		 background-color: #93faf6;
+  color: #1c1c1c;
+  font-family: 'Major Mono Display', monospace;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+	border: 2px solid #908ff9;
+  font-size: 25px;
+  transition: background-color 0.2s;
 	margin: 0 auto;
+}
+
+.flash-button:hover {
+  background-color: #fc7bd1;
+}
+
+.flash-button {
+  margin-top: 0;
 }
 
 @keyframes flash {
