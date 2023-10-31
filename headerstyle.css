@@ -262,9 +262,9 @@ margin: 10px;
     .mobile-popup {
         display: block; /* Show the pop-up */
     }
-	.flash-button2 {
-	max-width: 700px;
-		 background-color: #93faf6;
+.flash-button2 {
+max-width: 700px;
+background-color: #93faf6;
   color: #1c1c1c;
   font-family: 'Major Mono Display', monospace;
   text-decoration: none;
@@ -274,6 +274,7 @@ margin: 10px;
   font-size: 25px;
   transition: background-color 0.2s;
 	margin: 0 auto;
+	flex-wrap: wrap;
 }
 
 .flash-button2:hover {
