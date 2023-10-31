@@ -262,7 +262,7 @@ margin: 10px;
     .mobile-popup {
         display: block; /* Show the pop-up */
     }
-	.flash-button {
+	.flash-button2 {
 	max-width: 700px;
 		 background-color: #93faf6;
   color: #1c1c1c;
@@ -276,15 +276,15 @@ margin: 10px;
 	margin: 0 auto;
 }
 
-.flash-button:hover {
+.flash-button2:hover {
   background-color: #fc7bd1;
 }
 
-.flash-button {
+.flash-button2 {
   margin-top: 0;
 }
 
-@keyframes flash {
+@keyframes flash2 {
 	0% {
 		background-color: #eaff03;
 		color: #002531;
@@ -302,8 +302,8 @@ margin: 10px;
 	}
 	}
 
-.flash-button.flashing {
-	animation: flash 1s linear 10;
+.flash-button2.flashing {
+	animation: flash2 1s linear 10;
   font-family: 'Major Mono Display', monospace;
   text-decoration: none;
   padding: 5px 10px;
