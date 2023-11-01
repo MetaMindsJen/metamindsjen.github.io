@@ -33,14 +33,13 @@
 <meta property="og:image" content="https://metamindsjen.github.io/tcard.png">
 <meta property="og:url" content="https://metamindsjen.github.io">
 <meta property="og:type" content="website">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
   :root {
     --header-height: 100px; 
 	    --footer-height: 175px; 
   }
   
- 
 @media (max-width: 760px) {
  	.main-container {
   flex-grow: 1;
@@ -48,7 +47,6 @@
   flex-direction: column;
 }
 }
-
 
 </style>
 
@@ -92,9 +90,15 @@
   </div>
 </header>
 
-
 	<main>
-	</main><div class="main-container">
+	</main>
+	
+	<div id="mobile-popup" class="mobile-popup">
+    <button id="close-popup" class="close-popup">X</button>
+    <a href="https://bit.ly/MetaMindApp" class="flash-button2"><strong>try our ai for free now!</strong></a>
+</div>
+	
+	<div class="main-container">
   <div class="banner">
     <div class="onepager">
       <div class="banner-content">
@@ -187,49 +191,9 @@
 			</div>
 		</div>
 		</div>
-	<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript"></script>
 
-<script>
-document.querySelector('.menu-button').addEventListener('click', function () {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('menu-active');
-});
+<script src="common.js"></script>	
 
-const submenuParent = document.querySelector('.submenu-parent');
-submenuParent.addEventListener('mouseenter', function () {
-  const submenu = this.querySelector('.submenu');
-  submenu.classList.toggle('submenu-active');
-});
-
-const mainMenuItems = document.querySelectorAll('.menu > ul > li > a');
-mainMenuItems.forEach(function (menuItem) {
-  menuItem.addEventListener('click', function () {
-    const menu = document.querySelector('.menu');
-    menu.classList.remove('menu-active');
-  });
-});
-
-const subMenuItems = document.querySelectorAll('.submenu a');
-subMenuItems.forEach(function (subMenuItem) {
-  subMenuItem.addEventListener('click', function () {
-    const menu = document.querySelector('.menu');
-    menu.classList.remove('menu-active');
-  });
-});
-
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var flashButton = document.querySelector('.flash-button');
-
-    // Start the animation
-    flashButton.classList.add('flashing');
-
-    // Stop the animation after 20 seconds
-    setTimeout(function() {
-      flashButton.classList.remove('flashing');
-    }, 10000);
-  });
-</script>
 </body>
 </html>
