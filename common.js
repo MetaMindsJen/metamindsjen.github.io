@@ -1,6 +1,5 @@
-	<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);
 
-<script>
 document.querySelector('.menu-button').addEventListener('click', function () {
   const menu = document.querySelector('.menu');
   menu.classList.toggle('menu-active');
@@ -28,35 +27,31 @@ subMenuItems.forEach(function (subMenuItem) {
   });
 });
 
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var flashButton = document.querySelector('.flash-button');
-
+ document.addEventListener("DOMContentLoaded", function() {
+  var flashButton = document.querySelector('.flash-button');
+  if (flashButton) {
     // Start the animation
     flashButton.classList.add('flashing');
 
-    // Stop the animation after 20 seconds
+    // Stop the animation after 10 seconds (10000 milliseconds)
     setTimeout(function() {
       flashButton.classList.remove('flashing');
     }, 10000);
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var flashButton2 = document.querySelector('.flash-button2');
+  }
 
+  var flashButton2 = document.querySelector('.flash-button2');
+  if (flashButton2) {
     // Start the animation
     flashButton2.classList.add('flashing');
 
-    // Stop the animation after 20 seconds
+    // Stop the animation after 10 seconds (10000 milliseconds)
     setTimeout(function() {
       flashButton2.classList.remove('flashing');
     }, 10000);
-  });
-</script>
-	<script>
+  }
+});
+
   document.getElementById('close-popup').addEventListener('click', function() {
     document.getElementById('mobile-popup').style.display = 'none';
   });
-</script>
+
